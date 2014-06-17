@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT vcard4jConfiguration (type*)>
+<!-- lang: C, en_US, ... -->
+<!ATTLIST vcard4jConfiguration 
+  lang CDATA #IMPLIED>
+
+<!ELEMENT type (description?, value*, parameter*, implementation?)>
+<!--
+  name (ADR | AGENT | BDAY | CATEGORY | CLASS | EMAIL | FN | GEO | KEY | LABEL | LOGO | MAILER | N | NICKNAME | NOTE | ORG | PHOTO | PROID | REV | ROLE | SORT-STRING | SOUND | TEL | TITLE | TZ | UID | URL | VERSION) #REQUIRED
+-->
+<!ATTLIST type
+  name CDATA #REQUIRED
+  format (list | single | structured) #IMPLIED
+  mandatory (false | true) #IMPLIED>
+
+<!ELEMENT implementation EMPTY>
+<!ATTLIST implementation
+  className CDATA #REQUIRED>
+
+<!ELEMENT parameter (description?, value*)>
+<!ATTLIST parameter
+  name CDATA #REQUIRED>
+
+<!ELEMENT value (description?, implementation?)>
+<!ATTLIST value
+  name CDATA #IMPLIED>
+<!-- name can be null for non-stuctured types -->
+
+<!ELEMENT description (#PCDATA)>

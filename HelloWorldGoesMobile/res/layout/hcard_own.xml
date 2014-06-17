@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		* Copyright (C) 2007 Google Inc. * * Licensed under the Apache
+		License, Version 2.0 (the "License"); * you may not use this file
+		except in compliance with the License. * You may obtain a copy of the
+		License at * * http://www.apache.org/licenses/LICENSE-2.0 * * Unless
+		required by applicable law or agreed to in writing, software *
+		distributed under the License is distributed on an "AS IS" BASIS, *
+		WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+		implied. * See the License for the specific language governing
+		permissions and * limitations under the License.
+	-->
+
+<ScrollView android:id="@+id/widget126" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/bg"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:stretchColumns="1">
+
+
+		<!-- linearlayout for aligning the picked photo -->
+		<LinearLayout android:id="@+id/banner"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			style="@style/logo_padding">
+			<!--
+				imageview for the picked photo is refering to drawable/logo_big.png
+			-->
+			<ImageView android:id="@+id/photo" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:gravity="left" style="@style/logo" />
+
+		</LinearLayout>
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/hcardown_text_head"
+			style="@style/head" />
+
+		<TableRow>
+			<TableLayout>
+
+				<TableRow>
+					<ImageView android:id="@+id/userphoto"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" 
+						style="@style/userphoto_padding"/>
+				</TableRow>
+				<TableRow>
+					<Button android:id="@+id/hcard_button_edit"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="@string/hcard_button_edit" />
+				</TableRow>
+				<TableRow android:layout_height="fill_parent">
+					<!-- empty textview to give listview more space-->
+					<TextView android:layout_height="fill_parent"
+						android:layout_width="wrap_content" android:layout_weight="1.0"
+						android:minLines="7" />
+				</TableRow>
+			</TableLayout>
+			<ListView android:id="@+id/android:list"
+				android:layout_width="wrap_content" android:layout_height="fill_parent"
+				android:layout_weight="1.0" android:gravity="right" />
+		</TableRow>
+
+	</TableLayout>
+</ScrollView>

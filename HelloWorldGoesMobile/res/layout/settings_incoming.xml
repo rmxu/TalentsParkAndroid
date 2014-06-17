@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:scrollbarSize="12dip">
+
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:stretchColumns="1"
+		android:background="@drawable/bg">
+
+		<!-- linearlayout for aligning the picked photo -->
+		<LinearLayout android:id="@+id/banner"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			style="@style/logo_padding">
+			<!--
+				imageview for the picked photo is refering to drawable/logo_big.png
+			-->
+			<ImageView android:id="@+id/photo" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:gravity="left" style="@style/logo" />
+
+		</LinearLayout>
+
+		<TableRow>
+			<RadioGroup android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:orientation="horizontal">
+
+				<RadioButton android:id="@+id/mail_send_pop3"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:text="@string/mail_send_pop3" />
+
+				<RadioButton android:id="@+id/mail_send_pop3s"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:text="@string/mail_send_pop3s" />
+
+				<!--
+					<RadioButton android:id="@+id/mail_send_smtp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/mail_send_smtp"
+					android:layout_marginRight="10px" /> <RadioButton
+					android:id="@+id/mail_send_smtps"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/mail_send_smtp"
+					android:layout_marginRight="10px" /> <RadioButton
+					android:id="@+id/mail_send_nntp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/mail_send_smtp"
+					android:layout_marginRight="10px" /> <RadioButton
+					android:id="@+id/mail_send_nntps"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/mail_send_smtp"
+					android:layout_marginRight="10px" />
+				-->
+			</RadioGroup>
+		</TableRow>
+
+		<TableRow>
+			<TextView android:text="@string/mail_send_host_pop3"
+				android:layout_weight="1" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" style="@style/edittext_head" />
+			<TextView android:text="@string/mail_send_port"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				style="@style/edittext_head" />
+		</TableRow>
+		<TableRow>
+			<EditText android:id="@+id/mail_send_host"
+				android:layout_weight="1" android:layout_width="wrap_content"
+				android:singleLine="true" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_height="wrap_content" android:hint="@string/mail_send_host_pop3_hint"
+				android:autoText="true" 
+				style="@style/edittext"/>
+			<EditText android:id="@+id/mail_send_port"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:singleLine="true"
+				style="@style/edittext"/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="@string/settings_edittext_adress"
+				style="@style/edittext_head" />
+		</TableRow>
+		<TableRow>
+			<EditText android:id="@+id/settings_edittext_adress"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1" android:singleLine="true" 
+				style="@style/edittext"/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="@string/mail_send_user" style="@style/edittext_head" />
+		</TableRow>
+		<TableRow>
+			<EditText android:id="@+id/mail_send_user"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1" android:singleLine="true" 
+				style="@style/edittext"/>
+		</TableRow>
+
+		<TableRow>
+			<TextView android:text="@string/mail_send_password" style="@style/edittext_head" />
+		</TableRow>
+		<TableRow>
+			<EditText android:id="@+id/mail_send_password"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1" android:password="true"
+				android:singleLine="true" 
+				style="@style/edittext"/>
+		</TableRow>
+		<TableRow>
+			<Button android:id="@+id/settings_incoming_button_save"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:text="@string/settings_incoming_button_save"
+				android:layout_weight="1" 
+				style="@style/button"/>
+		</TableRow>
+	</TableLayout>
+</ScrollView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:scrollbarSize="12dip" android:background="@drawable/bg">
+
+	<TableLayout
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:stretchColumns="1">
+		
+	<!-- linearlayout for aligning the picked photo -->
+	<LinearLayout android:id="@+id/banner"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		style="@style/logo_padding">
+		<!--
+			imageview for the picked photo is refering to drawable/logo_big.png
+		-->
+		<ImageView android:id="@+id/photo" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:gravity="left" style="@style/logo" />
+
+	</LinearLayout>
+
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/message_checker_text_head"
+			android:textSize="20dip" android:paddingLeft="3dip"
+			android:paddingBottom="10dip" style="@style/head" />
+
+		<TableRow>
+			<TextView android:text="@string/message_from"
+				 android:layout_marginRight="10px"
+				android:layout_marginLeft="6px" 
+				style="@style/edittext_head"/>
+		</TableRow>
+		<TableRow>
+			<TextView android:id="@+id/message_from"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1" android:singleLine="true"
+				android:layout_marginRight="10px" android:layout_marginLeft="6px" 
+				style="@style/mail" />
+		</TableRow>
+
+		<TableRow>
+			<TextView android:text="@string/message_subject"
+				 android:layout_marginRight="10px"
+				android:layout_marginLeft="6px" 
+				style="@style/edittext_head"/>
+		</TableRow>
+		<TableRow>
+			<TextView android:id="@+id/message_subject"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1" android:singleLine="true"
+				android:layout_marginRight="10px" android:layout_marginLeft="6px"
+				style="@style/mail" />
+		</TableRow>
+
+		<TableRow>
+			<TextView android:text="@string/message_text"
+				 android:layout_marginRight="10px"
+				android:layout_marginLeft="6px" 
+				style="@style/edittext_head"/>
+		</TableRow>
+		
+		<TableRow>
+			<TextView android:id="@+id/message_text"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1.0" android:gravity="left|top"
+				android:minLines="5" android:autoText="true"
+				android:layout_marginRight="10px" android:layout_marginLeft="6px"
+				style="@style/mail" />
+		</TableRow>
+
+		<TextView android:id="@+id/message_checker_result_field"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginRight="10px" android:layout_marginLeft="6px"
+			 style="@style/info">
+		</TextView>
+
+	</TableLayout>
+
+</ScrollView>

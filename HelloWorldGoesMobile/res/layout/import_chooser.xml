@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+        
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:stretchColumns="1"
+   android:background="@drawable/bg">
+   
+   	<!-- linearlayout for aligning the picked photo -->
+	<LinearLayout android:id="@+id/banner"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		style="@style/logo_padding"
+		
+		>
+		<!--
+			imageview for the picked photo is refering to drawable/logo_big.png
+		-->
+		<ImageView android:id="@+id/photo" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:gravity="left"
+			style="@style/logo"
+			 />
+
+	</LinearLayout>
+
+
+   <TableRow>
+
+       <Button android:id="@+id/import_hw_button"
+           android:text="@string/import_hw_button"
+           android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_weight="1" />
+   </TableRow>
+   
+     <TableRow>
+
+       <Button android:id="@+id/import_network_button"
+           android:text="@string/import_network_button" 
+           android:layout_width="fill_parent" android:layout_height="wrap_content"
+		  android:layout_weight="1"/>
+           
+   </TableRow>
+
+</TableLayout>
+  

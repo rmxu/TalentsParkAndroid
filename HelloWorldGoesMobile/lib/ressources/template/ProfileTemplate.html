@@ -1,0 +1,156 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="http://gauntlet.unixag-zw.fh-kl.de/~maac0001/helloWorldAccount/style.css">
+</head>
+<body>
+	<div class='profile'>
+		
+		<div class='hcard'>
+		
+			<!-- Logo -->
+			#foreach( $l in $logo )
+			
+	    		<div class='logo'>
+	    			<img src='$l.getValue()'>
+	    		</div>
+	    		
+			#end
+			
+			<!-- Photo -->
+			#foreach( $p in $photo )
+			
+	    		<div class='photo'>
+	    			<img src='$p.getValue()'>
+	    		</div>
+	    		
+			#end
+			
+			<!-- Formatted Name -->
+			<div   class='fn'>
+			#if($fn.getValue() != "")
+				 $fn.getValue()
+			#end
+			</div>
+			
+			<br>
+			#if($name.getGivenName().getValue())
+			<!-- Name -->
+			<div  class='n'>
+				Name: $name.getHonorificPrefix().getValue() $name.getGivenName().getValue() $name.getAdditionalName().getValue() $name.getFamilyName().getValue() $name.getHonorificSuffix().getValue()
+			</div>
+			#end
+			
+			
+			
+			<!-- Adress -->
+			#foreach( $a in $adr )
+			
+				<div  class='adr'>
+					Adresse ($a.getKey()):  
+					
+					#if ($a.getStreetAddress().getValue() != "")
+					<div>$a.getStreetAddress().getValue()</div>
+					#end
+					
+					#if ($a.getExtendedAddress().getValue() != "")
+					<div>$a.getExtendedAddress().getValue()</div>
+					#end
+					
+					#if($a.getPostalCode().getValue() != "" && $a.getLocality().getValue() != "")
+						<div>
+						#if($a.getPostalCode().getValue() != "")
+						$a.getPostalCode().getValue()
+						#end
+						
+						#if($a.getLocality().getValue() != "")
+						$a.getLocality().getValue()
+						#end
+						</div>
+					#end
+					
+					#if ($a.getRegion().getValue() != "")
+					<div>$a.getRegion().getValue()</div>
+					#end
+					
+					#if ($a.getCountryName().getValue() != "")
+					<div>$a.getCountryName().getValue()</div>
+					#end
+					
+				</div>
+			
+			#end
+			
+			#if($bday.getValue() != "")
+			<!-- Birthday -->
+			<div  class='bday'>
+				Geburtstag: $bday.getValue()
+			</div>
+			#end
+			
+			<!-- E-Mail -->
+			#foreach( $e in $email )
+			
+				<div class='email'>
+					E-Mail ($e.getType()): $e.getValue()
+				</div>
+				
+			#end
+			
+			<!-- URL -->
+			#foreach( $u in $url )
+			
+				<div class='email'>
+					URL:  <a href='http://$u.getValue()'>$u.getValue()</a>
+				</div>
+				
+			#end
+			
+			<!-- Nickname -->
+			#foreach( $n in $nickname )
+			
+				<div  class='nickname'>
+					Nickname: $n.getValue()
+				</div>
+				
+			#end
+			
+			
+			<!-- Organisation -->
+			#foreach( $o in $org )
+			
+				<div  class='org'>
+					
+					Organisation: $o.getOrganizationName()
+					
+					#set( $units = $o.getOrganizationUnit() )
+					#foreach( $unit in $units)
+					
+						<div>Abteilung: $unit</div>
+					
+					#end
+					
+				</div>
+				
+			#end
+			
+			<!-- Telefon -->
+			#foreach( $t in $tel )
+				
+				<div  class='email'>
+					Telefon ($t.getType()): $t.getValue()
+				</div>
+			
+			#end
+		
+     		
+			#foreach ($a in $attributelist)
+					<div  class='attribute'>
+					$a.getKey(): $a.getValue()
+					</div>
+			#end
+		</div>
+		
+	</div>
+
+</body>
+</html>

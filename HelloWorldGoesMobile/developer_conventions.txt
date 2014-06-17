@@ -1,0 +1,36 @@
+
+
+* Codierung: UTF-8 !! Android ist für utf-8 optimiert
+  -> klick aufs Projekt -> Properties -> Resource -> Text File Encoding: UTF-8
+  -> keine Probleme mit Sonderzeichen etc. sicher ist sicher...
+
+* Sprache:	Englisch (Kommentare, Logs, Labels, ...)
+
+* Logger von android verwenden:
+
+	 private static final String I = 
+		 "======================= [HELLO-WORLD] " +
+		 "<die-klasse-bei-der-geloggt-wird>" + ": ";	
+		 
+* XML-Conventions:
+
+ 1)	wir haben z.B. ein <Label>: <InputFeld>
+	---> <activity-name-der-klasse>_<name-des-labels> für das Label
+	---> <activity-name-der-klasse>_<name-des-labels_input> für das inputFeld
+	
+	also z.B. 
+	<TextView android:text="@string/login_username" ... -> TextFeld
+    <EditText      android:id="@+id/login_username_input" ... -> InputFeld/EditText
+    
+ 2) id und text in xml´s einfach gleich benennen!!! sorgt sonst nur für Verwirrung:
+ 
+ 	also z.B.        
+ 		<Button android:id="@+id/login_button_cancel"		 ---> id: login_button_cancel
+           android:text="@string/login_button_cancel" /> ---> string: login_button_cancel
+           
+
+* Java-Conventions:
+	- Member mit führendem "m"
+	- static Variablen mit führendem "s"
+	- static final mit GROSSBUCHSTABEN
+	- wenn man mal dazukommt: kommentieren ;)

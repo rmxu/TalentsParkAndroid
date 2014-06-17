@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:stretchColumns="1" android:background="@drawable/bg">
+
+	<!--
+		What had to be done? Yeah, you have to create the TextViews
+		dynamically so how you want to realize that? And don't forget to take
+		a hint or make the EditTexts already filled with the current attribute
+	-->
+
+	<!-- linearlayout for aligning the picked photo -->
+	<LinearLayout android:id="@+id/banner"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		style="@style/logo_padding">
+		<!--
+			imageview for the picked photo is refering to drawable/logo_big.png
+		-->
+		<ImageView android:id="@+id/photo" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:gravity="left" style="@style/logo" />
+
+	</LinearLayout>
+
+	<!--
+		<TableRow> <TextView android:text="Fullname: "
+		android:textStyle="bold" android:gravity="right"
+		android:layout_marginTop="3dip" android:padding="3dip" /> <EditText
+		android:layout_weight="1" android:id="@+id/edit_fn"
+		android:layout_width="wrap_content" android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Birthday: " android:textStyle="bold"
+		android:gravity="right" android:layout_marginTop="3dip"
+		android:padding="3dip" /> <EditText android:layout_weight="1"
+		android:id="@+id/edit_bday" android:layout_width="wrap_content"
+		android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Nickname: " android:textStyle="bold"
+		android:gravity="right" android:layout_marginTop="3dip"
+		android:padding="3dip" /> <EditText android:layout_weight="1"
+		android:id="@+id/edit_nname" android:layout_width="wrap_content"
+		android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Email: " android:textStyle="bold"
+		android:gravity="right" android:layout_marginTop="3dip"
+		android:padding="3dip" /> <EditText android:layout_weight="1"
+		android:id="@+id/edit_email" android:layout_width="wrap_content"
+		android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Tel: " android:textStyle="bold" android:gravity="right"
+		android:layout_marginTop="3dip" android:padding="3dip" /> <EditText
+		android:layout_weight="1" android:id="@+id/edit_tel"
+		android:layout_width="wrap_content" android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="URL: " android:textStyle="bold" android:gravity="right"
+		android:layout_marginTop="3dip" android:padding="3dip" /> <EditText
+		android:layout_weight="1" android:id="@+id/edit_url"
+		android:layout_width="wrap_content" android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Address: " android:textStyle="bold"
+		android:gravity="right" android:layout_marginTop="3dip"
+		android:padding="3dip" /> <EditText android:layout_weight="1"
+		android:id="@+id/edit_adr" android:layout_width="wrap_content"
+		android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Country: " android:textStyle="bold"
+		android:gravity="right" android:layout_marginTop="3dip"
+		android:padding="3dip" /> <EditText android:layout_weight="1"
+		android:id="@+id/edit_country" android:layout_width="wrap_content"
+		android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Post-Office-Box: " android:textStyle="bold"
+		android:gravity="right" android:layout_marginTop="3dip"
+		android:padding="3dip" /> <EditText android:layout_weight="1"
+		android:id="@+id/edit_postofficebox"
+		android:layout_width="wrap_content" android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Region: " android:textStyle="bold"
+		android:gravity="right" android:layout_marginTop="3dip"
+		android:padding="3dip" /> <EditText android:layout_weight="1"
+		android:id="@+id/edit_region" android:layout_width="wrap_content"
+		android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Locality: " android:textStyle="bold"
+		android:gravity="right" android:layout_marginTop="3dip"
+		android:padding="3dip" /> <EditText android:layout_weight="1"
+		android:id="@+id/edit_locality" android:layout_width="wrap_content"
+		android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Postal-Code: " android:textStyle="bold"
+		android:gravity="right" android:layout_marginTop="3dip"
+		android:padding="3dip" /> <EditText android:layout_weight="1"
+		android:id="@+id/edit_postalcode" android:layout_width="wrap_content"
+		android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow> <TableRow> <TextView
+		android:text="Extended-Address: " android:textStyle="bold"
+		android:gravity="right" android:layout_marginTop="3dip"
+		android:padding="3dip" /> <EditText android:layout_weight="1"
+		android:id="@+id/edit_extendedaddress"
+		android:layout_width="wrap_content" android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:autoText="true"
+		android:layout_marginRight="10px" /> </TableRow>
+	-->
+	<ListView android:id="@+id/android:list" android:layout_width="wrap_content"
+		android:layout_height="0dip" android:layout_weight="1.0"
+		android:scrollingCache="true">
+	</ListView>
+
+	<TableRow>
+		<Button android:id="@+id/hcard_button_cancel" android:text="@string/hcard_button_cancel" />
+		<Button android:id="@+id/hcard_button_confirm" android:text="@string/hcard_button_confirm" />
+	</TableRow>
+
+</TableLayout>

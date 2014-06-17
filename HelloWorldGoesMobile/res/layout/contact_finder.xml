@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+android:id="@+id/widget52"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+<!-- 
+<TextView
+android:id="@+id/simpleGM_tv"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/address"
+android:layout_x="11px"
+android:layout_y="5px"
+>
+</TextView>
+-->
+<!-- 
+		// tobi: bHN2PQvyLv6iLzKMdMQRR0rCblzooxaY9aWx2Q"
+		// jules: 0dTS7pWjetgQ8VSAx6f0PreVQ_5pnFeJsb0SeTg
+		// arti : 0lWrMhh-8GtG2f3UOI7b-6wZB_mc0XeDApH8jXA
+		// kc: 03-qNsk3Ama4c68dblaVheFufR5Mfb7tw33bDeg
+ -->
+<com.google.android.maps.MapView android:id="@+id/contact_finder_map"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:clickable="true"
+android:apiKey="0dTS7pWjetgQ8VSAx6f0PreVQ_5pnFeJsb0SeTg"
+/>
+
+
+
+
+<ImageButton
+android:id="@+id/contact_finder_button_toggleView"
+android:src="@drawable/toggle"
+android:layout_width="50px"
+android:layout_height="46px"
+android:layout_alignParentTop="true"
+android:layout_alignParentRight="true"
+>
+</ImageButton>
+<ImageButton
+android:id="@+id/contact_finder_button_zoomIn"
+android:src="@drawable/zoomin"
+android:layout_width="50px"
+android:layout_height="53px"
+android:layout_alignParentBottom="true"
+android:layout_toRightOf="@+id/contact_finder_button_center"
+>
+</ImageButton>
+<ImageButton
+android:id="@+id/contact_finder_button_center"
+android:src="@drawable/center"
+android:layout_width="50px"
+android:layout_height="53px"
+android:layout_alignParentBottom="true"
+android:layout_centerHorizontal="true"
+
+>
+</ImageButton>
+<ImageButton
+android:id="@+id/contact_finder_button_zoomOut"
+android:src="@drawable/zoomout"
+android:layout_width="49px"
+android:layout_height="53px"
+android:layout_alignParentBottom="true"
+android:layout_toLeftOf="@+id/contact_finder_button_center"
+
+>
+</ImageButton>
+
+
+<!--   
+<com.google.android.maps.MapView android:id="@+id/simpleGM_map"
+android:layout_width="fill_parent"
+android:layout_height="310px"
+android:layout_x="2px"
+android:layout_y="100px"
+android:clickable="true" 
+android:apiKey="0bHN2PQvyLv6IuClpX2iL9UZVU25D84Qwg-_ZhA"
+/>
+-->
+</RelativeLayout>
+

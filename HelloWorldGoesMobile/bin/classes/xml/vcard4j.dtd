@@ -1,0 +1,21 @@
+<?xml encoding="US-ASCII"?>
+<!ELEMENT addressBook (vcard*)>
+<!ELEMENT vcard (type*)>
+<!ATTLIST vcard
+	group CDATA #IMPLIED
+>
+<!ELEMENT type (parameter*, value)>
+<!ATTLIST type
+	name CDATA #REQUIRED
+	group CDATA #IMPLIED
+	encoding CDATA #IMPLIED
+>
+<!ELEMENT parameter EMPTY>
+<!ATTLIST parameter
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+<!ELEMENT value (text?, structuredValue*, valueList*)>
+<!ELEMENT structuredValue (valueList+)>
+<!ELEMENT valueList (text)>
+<!ELEMENT text (#PCDATA)>

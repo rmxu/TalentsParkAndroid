@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Urs IBM Research Libiszewski (IBM Reserach) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" elementFormDefault="qualified" jxb:version="1.0">
+	<!-- What does that do??? <xs:annotation>
+		<xs:appinfo>
+			<jxb:globalBindings choiceContentProperty="true"/>
+		</xs:appinfo>
+	</xs:annotation> -->
+	<xs:element name="addressBook">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="vcard" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="encoding" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="listItem">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="text"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="parameter">
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="value" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- UNSUPPORTED: <xs:element name="type" type="typeType" abstract="true"/> -->
+	<xs:element name="type">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="parameter" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="value"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="group" type="xs:string" use="optional"/>
+			<xs:attribute name="encoding" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="value">
+		<xs:complexType>
+			<xs:choice>
+				<xs:annotation>
+					<xs:appinfo>
+						<jxb:property name="content"/>	
+					</xs:appinfo>
+				</xs:annotation>
+				<xs:element ref="structuredItem" maxOccurs="unbounded"/>
+				<xs:element ref="listItem" maxOccurs="unbounded"/>
+				<xs:element ref="text"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="vcard">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="type" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="group" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="structuredItem">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="listItem" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="text" type="xs:string"/>
+</xs:schema>

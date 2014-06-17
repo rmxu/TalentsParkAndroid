@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<!--
+		<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		>
+	-->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@drawable/bg">
+	<!-- linearlayout for aligning the picked photo -->
+	<LinearLayout android:id="@+id/banner"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		style="@style/logo_padding">
+		<!--
+			imageview for the picked photo is refering to drawable/logo_big.png
+		-->
+		<ImageView android:id="@+id/photo" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:gravity="left" style="@style/logo" />
+
+	</LinearLayout>
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/newsubprofile_text_head"
+		style="@style/head" />
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/contacttypes_text_new"
+		style="@style/edittext_head">
+	</TextView>
+	<EditText android:id="@+id/contacttypes_field_new"
+		android:singleLine="true" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		style="@style/edittext"/>
+	<!--
+		<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/contacttypes_text_url"
+		style="@style/ListItemValue" > </TextView> <EditText
+		android:singleLine="true" android:id="@+id/contacttypes_field_url"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_marginRight="26px"
+		/>
+	-->
+	<ListView android:id="@+id/android:list" android:layout_width="wrap_content"
+		android:layout_height="0dip" android:layout_weight="1.0">
+	</ListView>
+	<Button android:id="@+id/contacttypes_button_save"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:text="Create Group"
+		style="@style/button">
+	</Button>
+
+</LinearLayout>
+	<!--  
+</ScrollView>-->

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		* Copyright (C) 2007 Google Inc. * * Licensed under the Apache
+		License, Version 2.0 (the "License"); * you may not use this file
+		except in compliance with the License. * You may obtain a copy of the
+		License at * * http://www.apache.org/licenses/LICENSE-2.0 * * Unless
+		required by applicable law or agreed to in writing, software *
+		distributed under the License is distributed on an "AS IS" BASIS, *
+		WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+		implied. * See the License for the specific language governing
+		permissions and * limitations under the License.
+	-->
+<ScrollView android:id="@+id/widget126" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/bg"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:stretchColumns="1">
+
+		<!-- linearlayout for aligning the picked photo -->
+		<LinearLayout android:id="@+id/banner"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			style="@style/logo_padding">
+			<!--
+				imageview for the picked photo is refering to drawable/logo_big.png
+			-->
+			<ImageView android:id="@+id/photo" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:gravity="left" style="@style/logo" />
+
+		</LinearLayout>
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="About" style="@style/head" />
+
+		<TextView android:text="Version" style="@style/edittext_head" />
+
+		<TextView android:text="@string/about_version" style="@style/mail" />
+
+		<TextView android:text="Source-Code" style="@style/edittext_head" />
+
+		<TextView android:autoLink="web" android:text="http://sourceforge.net" style="@style/mail" />
+
+		<TextView android:text="HelloWorld Goes Mobile (helloworldgm)"
+			style="@style/mail" />
+
+		<TextView android:text="Official Website" style="@style/edittext_head" />
+
+		<TextView android:autoLink="web" android:text="www.helloworld-network.org" style="@style/mail" />
+
+		<TextView android:text="Developer" style="@style/edittext_head" />
+
+		<TextView android:text="Artur Friesen" style="@style/mail" />
+
+		<TextView android:text="Kok-Chee Lim" style="@style/mail" />
+		<TextView android:text="Julian Weigle" style="@style/mail" />
+		<TextView android:text="Tobias Schröter" style="@style/mail" />
+
+		<TextView android:text="Lecturer" style="@style/edittext_head" />
+
+		<TextView android:text="Prof. Hendrik Speck" style="@style/mail" />
+		<TextView android:autoLink="web" android:text="www.hendrikspeck.com" style="@style/mail" />
+
+		<TextView android:text="Faculty" style="@style/edittext_head" />
+
+		<TextView android:text="University of Applied Sciences Kaiserslautern"
+			style="@style/mail" />
+		<TextView android:text="www.fh-kl.de" android:autoLink="web" style="@style/mail" />
+
+	</TableLayout>
+
+</ScrollView>

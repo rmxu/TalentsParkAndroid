@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	android:versionCode="1" android:versionName="1.0.0"
+	package="de.fhkl.mHelloWorld.implementation">
+
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission
+		android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission
+		android:name="android.permission.ACCESS_MOCK_LOCATION" />
+	<uses-permission
+		android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission
+		android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+
+	<!-- evtl. for mail-client -->
+	<uses-permission
+		android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.READ_OWNER_DATA" />
+	<uses-permission
+		android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+
+	<application android:label="@string/hello_world"
+		android:icon="@drawable/logo">
+		<uses-library android:name="com.google.android.maps" />
+
+		<activity android:name="HelloWorldLogin"
+			android:label="@string/activity_login">
+			<intent-filter android:label="@string/activity_login">
+				<action android:name="android.intent.action.MAIN" />
+				<category
+					android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+
+		
+		<activity android:name="About"
+			android:label="@string/activity_about">
+		</activity>
+		
+
+		<activity android:label="@string/activity_import"
+			android:name="ImportChooser">
+		</activity>
+
+		<activity
+			android:label="@string/activity_import_existing_account"
+			android:name="ImportExistingAccount">
+		</activity>
+
+		<activity android:name="ContactFinderMap"
+			android:label="@string/map_title">
+
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category
+					android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+
+		<activity android:name="Contacts"></activity>
+
+
+		<!-- Import-Profile-from-network-chooser part -->
+		<activity android:label="@string/activity_import_from_network_chooser"
+			android:name="ImportProfileFromNetworkChooser">
+		</activity>
+
+		<!-- Import-Profile-from-network part -->
+		<activity android:label="@string/activity_import_from_network"
+			android:name="ImportProfileFromNetwork">
+		</activity>
+
+		<!-- =============================== -->
+		<!--  email-client: send  -->
+		<!-- =============================== -->
+		<activity android:name="MailApp"
+			android:label="@string/activity_import_mail">
+			<!-- android:theme="@android:style/Theme.Light">   -->
+			<intent-filter>
+				<category
+					android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name="ShowHCard"></activity>
+
+		<!-- Show-own-HCard part -->
+		<activity android:label="@string/activity_show_own_hcard"
+			android:name="ShowOwnHCard">
+		</activity>
+
+		<!-- Edit-own-HCard part -->
+		<activity android:label="@string/activity_edit_own_hcard"
+			android:name="EditOwnHCard">
+		</activity>
+
+		<activity android:name="Contact_Types"></activity>
+		<activity android:name="CreateSubprofile"></activity>
+		<activity android:name="Dummy"></activity>
+		<activity android:name="Contacts_Gallery"></activity>
+		<activity android:name="SettingsChooser"></activity>
+		<activity android:name="Settings"></activity>
+		<activity android:name="InviteFriend"
+			android:label="@string/activity_invitefriend">
+		</activity>
+		<activity android:name="MessageWriter"
+			android:label="@string/activity_write_message">
+		</activity>
+		<activity android:name="MailChecker"
+			android:label="@string/activity_mail_checker">
+		</activity>
+	<activity android:name="CreateAccount"></activity>
+</application>
+
+
+
+
+
+</manifest>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="description" type="xs:string"/>
+	<xs:element name="implementation">
+		<xs:complexType>
+			<xs:attribute name="className" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="parameter">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="description" minOccurs="0"/>
+				<xs:element ref="value" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="type">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="description" minOccurs="0"/>
+				<xs:element ref="value" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="parameter" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="implementation" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="format" use="optional" default="single">
+				<xs:simpleType>
+					<xs:restriction base="xs:NMTOKEN">
+						<xs:enumeration value="list"/>
+						<xs:enumeration value="single"/>
+						<xs:enumeration value="structured"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="mandatory" type="xs:boolean" use="optional" default="false"/>
+			<!--
+ADR | AGENT | BDAY | CATEGORY | CLASS | EMAIL | FN | GEO | KEY | LABEL | LOGO | MAILER | N | NICKNAME | NOTE | ORG | PHOTO | PROID | REV | ROLE | SORT-STRING | SOUND | TEL | TITLE | TZ | UID | URL | VERSION
+			-->
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="value">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="description" minOccurs="0"/>
+				<xs:element ref="implementation" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="vcard4jConfiguration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="type" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="lang" type="xs:string" use="optional" default="C"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

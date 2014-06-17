@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/widget28"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView android:id="@+id/text1" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" style="@style/ListItemHead" />
+	<EditText android:layout_weight="1" android:id="@+id/text2"
+		android:layout_width="fill_parent" android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="fill_parent" android:autoText="true"/>
+</LinearLayout>
