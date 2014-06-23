@@ -5,21 +5,6 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 public class HelloWorldProperties {
-//	private static final String BUNDLE_NAME = "de.fhkl.helloWorld.helloWorld";
-//
-//	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle
-//			.getBundle(BUNDLE_NAME);
-//
-//	private HelloWorldProperties() {
-//	}
-//
-//	public static String getString(String key) {
-//		try {
-//			return RESOURCE_BUNDLE.getString(key);
-//		} catch (MissingResourceException e) {
-//			return '!' + key + '!';
-//		}
-//	}
 	
 	// a little bit unusual method of getting data, but it´s the closest way to implement
 	// like in the desktop version
