@@ -6,7 +6,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.Date;
@@ -14,19 +13,12 @@ import java.util.Date;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.PBEParameterSpec;
 
-import org.apache.commons.codec.binary.Hex;
-import org.apache.xerces.dom.DOMImplementationImpl;
 import org.apache.xerces.dom.DocumentImpl;
 import org.apache.xml.serialize.OutputFormat;
 import org.apache.xml.serialize.XMLSerializer;
 
-import java.util.logging.*;
-
-import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Text;
-
 import android.util.Log;
 
 
@@ -108,8 +100,6 @@ public class AccountManager implements IAccountManager {
 	public Account login(String username, String password)
 			throws WrongLoginException, NoAccountException {
 
-		
-
 		Account account = null;
 		try {
 			account = decryptAndParseAccount(username, password);
@@ -147,9 +137,6 @@ public class AccountManager implements IAccountManager {
 //		String userDir = System.getProperty("user.home");
 		
 		String seperator = System.getProperty("file.separator");
-		File helloworldDir = new File(helloWorldSubDir);
-		
-
 		String userAccountDir = helloWorldSubDir + seperator + username;
 		File userAccount = new File(userAccountDir);
 
@@ -541,6 +528,10 @@ public class AccountManager implements IAccountManager {
 		return sp;
 	}
 
+	/*
+	 * create a new subProfile that match the given relationship type,
+	 * and add it to the given userAccount
+	 */
 	public EncryptedSubProfile createNewSubProfile(RelationShipType r, Account userAccount) {
 	
 		
@@ -569,6 +560,9 @@ public class AccountManager implements IAccountManager {
 		return subProfile;
 	}
 
+	/*
+	 * upload a ByteArray based on subProfile through the given conn and path.
+	 */
 	public boolean uploadSubprofile(SubProfile subProfile,
 			FileTransferConnection conn, String path) {
 		
@@ -606,11 +600,13 @@ public class AccountManager implements IAccountManager {
 
 	}
 
+	/*
+	 * empty, not used
+	 */
 	public boolean uploadPublicKey(PublicKey publicKey,
 			FileTransferConnection conn, String path) {
 
-		boolean success = false;
-/*
+		/*
 		try {
 
 			Document doc = new DocumentImpl();
@@ -636,6 +632,9 @@ public class AccountManager implements IAccountManager {
 
 	}
 
+	/*
+	 * upload the given InputStream to a server through the given conn and path
+	 */
 	public boolean uploadFile(InputStream in, FileTransferConnection conn,
 			String path) {
 
@@ -751,6 +750,9 @@ public class AccountManager implements IAccountManager {
 		return null;
 	}
 
+	/**
+	 * add a new contact to the user's account of HelloWorldBasic
+	 */
 	public boolean addContact(Message<RelationShipRequestBody> request,
 			RelationShipType relation) {
 
