@@ -12,6 +12,11 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
+/**
+ * This class parse the inputStream or String to a document.
+ * @author Naruto
+ * @date 2014-06-24
+ */
 public class GlobalParser {
 
 	public static Document parseXML(InputStream in) {

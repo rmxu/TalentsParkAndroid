@@ -1,9 +1,6 @@
 package de.fhkl.helloWorld.implementation.model.attribute;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-
-
 import org.w3c.dom.Element;
 
 import de.fhkl.helloWorld.interfaces.model.attribute.Attribute;

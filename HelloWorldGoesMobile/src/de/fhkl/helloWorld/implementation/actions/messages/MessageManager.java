@@ -9,8 +9,6 @@ import java.security.PrivateKey;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.StringTokenizer;
-
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
@@ -29,9 +27,7 @@ import de.fhkl.helloWorld.implementation.model.message.SessionKey;
 import de.fhkl.helloWorld.implementation.model.parser.GlobalParser;
 import de.fhkl.helloWorld.implementation.model.security.CryptoAES256;
 import de.fhkl.helloWorld.implementation.model.security.CryptoRSA2048;
-import de.fhkl.helloWorld.implementation.model.security.CryptoUtil;
 import de.fhkl.mHelloWorld.implementation.HelloWorldBasic;
-import de.fhkl.mHelloWorld.implementation.Helper;
 import de.fhkl.mHelloWorld.implementation.http.Client;
 import de.fhkl.mHelloWorld.implementation.mail.MailClient;
 import de.fhkl.mHelloWorld.implementation.mail.MessageReceiver;
@@ -45,7 +41,6 @@ import de.fhkl.helloWorld.interfaces.model.account.configuration.SendMailConnect
 import de.fhkl.helloWorld.interfaces.model.account.key.PublicKey;
 import de.fhkl.helloWorld.interfaces.model.account.profile.SubProfile;
 import de.fhkl.helloWorld.interfaces.model.attribute.AttributeList;
-import de.fhkl.helloWorld.interfaces.model.attribute.InvalidClassException;
 import de.fhkl.helloWorld.interfaces.model.messages.Message;
 import de.fhkl.helloWorld.interfaces.model.messages.MessageBody;
 import de.fhkl.helloWorld.interfaces.model.messages.MessageWrapper;

@@ -1,8 +1,6 @@
 package de.fhkl.helloWorld;
 
 import java.util.HashMap;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
 
 public class HelloWorldProperties {
 	

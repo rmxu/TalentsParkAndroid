@@ -30,6 +30,9 @@ import de.fhkl.helloWorld.interfaces.model.parser.IAccountParser;
 
 public class AccountParser implements IAccountParser {
 
+	/**
+	 * parse the inputStream to an account
+	 */
 	public Account parseAccount(BufferedInputStream is) {
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
@@ -62,6 +65,9 @@ public class AccountParser implements IAccountParser {
 		return account;
 	}
 
+	/**
+	 * parse an account to a xml document
+	 */
 	public Document parseAccount(Account account) {
 
 		Document doc;

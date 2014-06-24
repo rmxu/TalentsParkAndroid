@@ -43,6 +43,13 @@ public class CryptoRSA2048  {
 	// the signature hash algorithm
 	private String signatureHash = "MD5withRSA";
 
+	/**
+	 * check if the given message is identical to the generated signature.
+	 * @param publicKey
+	 * @param message
+	 * @param sign
+	 * @return
+	 */
 	public boolean checkSignature(PublicKey publicKey, String message,
 			String sign) {
 
@@ -86,6 +93,9 @@ public class CryptoRSA2048  {
 		return false;
 	}
 
+	/*
+	 * generate signature with own private key from the given message
+	 */
 	public String signMessage(PrivateKey privateKey, String message) {
 		try {
 			// generate signature with own private key from the given message
@@ -115,6 +125,9 @@ public class CryptoRSA2048  {
 
 	}
 	
+	/*
+	 * generate signature with own private key from the given message
+	 */
 	public String signMessage2(PrivateKey privateKey, SecretKey message) {
 		try {
 			// generate signature with own private key from the given message
@@ -144,6 +157,9 @@ public class CryptoRSA2048  {
 
 	}
 
+	/*
+	 * encrypt the given String with given PublicKey to a cipher object
+	 */
 	public String encrypt(String in, PublicKey key) {
 
 		// generate cipher object
@@ -174,6 +190,9 @@ public class CryptoRSA2048  {
 
 	}
 	
+	/*
+	 * same with the function encrypt(,) above.
+	 */
 	public String encrypt2(SecretKey in, PublicKey key) {
 
 		// generate cipher object
@@ -204,6 +223,9 @@ public class CryptoRSA2048  {
 
 	}
 
+	/*
+	 * decrypt the given String with given PrivateKey
+	 */
 	public String decrypt(String encrypted, PrivateKey key) {
 
 		Log.i(I, "---------------------- decrypt: RSA2048 --------------------");
@@ -256,6 +278,9 @@ public class CryptoRSA2048  {
 		return decrypted;
 	}
 
+	/*
+	 * generate a KeyPair with the global Algorithm and length
+	 */
 	public KeyPair generateKeyPair() {
 		KeyPair keyPair = null;
 		try {

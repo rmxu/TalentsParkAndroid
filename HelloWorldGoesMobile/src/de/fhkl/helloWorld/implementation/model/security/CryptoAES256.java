@@ -216,6 +216,10 @@ public class CryptoAES256   {
 		return decrypted;
 	}
 
+	/**
+	 * generate secretKey
+	 * @return
+	 */
 	public SecretKey generateKey() {
 		SecretKey secretKey = null;
 		try {
