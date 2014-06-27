@@ -2,10 +2,8 @@ package de.fhkl.helloWorld.implementation.util.ftp;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 import java.net.SocketException;
 
-import org.apache.commons.net.PrintCommandListener;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPReply;
 
@@ -13,6 +11,11 @@ import org.apache.commons.net.ftp.FTPReply;
 //import de.fhkl.helloWorld.implementation.util.sftp.PrintCommandListener;
 import de.fhkl.helloWorld.interfaces.util.ftp.IFTPClient;
 
+/**
+ * This class offers some methods for FTP.
+ * @author Naruto
+ * @date 2014-6-25
+ */
 public class FTPClient extends org.apache.commons.net.ftp.FTPClient implements
 		IFTPClient {
 
@@ -22,6 +25,9 @@ public class FTPClient extends org.apache.commons.net.ftp.FTPClient implements
 	private String username;
 	private String password;
 
+	/*
+	 * constructor function
+	 */
 	public FTPClient(String url, String username, String password) {
 		super();
 		this.url = url;
@@ -31,7 +37,9 @@ public class FTPClient extends org.apache.commons.net.ftp.FTPClient implements
 
 	@Override
 	public void disconnect() {
-		
+		/*
+		 * disconnect the FTP client
+		 */
 		if (isConnected())
 			try {
 				super.disconnect();
@@ -41,15 +49,15 @@ public class FTPClient extends org.apache.commons.net.ftp.FTPClient implements
 			}
 	}
 
-	public boolean uploadSingleFile(InputStream source, String target) {
-		if (isConnected()) {
-			if (uploadFile(source, target)) {
-				disconnect();
-				return true;
-			}
-		}
-		return false;
-	}
+//	public boolean uploadSingleFile(InputStream source, String target) {
+//		if (isConnected()) {
+//			if (uploadFile(source, target)) {
+//				disconnect();
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
 
 	public boolean uploadFile(Object source, Object target) {
 		uploadFile((InputStream) source, (String) target);

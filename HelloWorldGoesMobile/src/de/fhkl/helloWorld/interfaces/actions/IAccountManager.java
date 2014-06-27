@@ -13,6 +13,9 @@ import de.fhkl.helloWorld.interfaces.model.attribute.AttributeList;
 import de.fhkl.helloWorld.interfaces.model.messages.Message;
 import de.fhkl.helloWorld.interfaces.model.messages.body.RelationShipRequestBody;
 
+/*
+ * This Class provides methods to manage user’s account.
+ */
 public interface IAccountManager {
 
 	public Account login(String username, String password)

@@ -2,6 +2,11 @@ package de.fhkl.helloWorld.implementation.model.session;
 
 import de.fhkl.helloWorld.interfaces.model.account.Account;
 
+/**
+ * basic info of the HelloWorld Session
+ * @author Naruto
+ * @date 2014-6-25
+ */
 public class HelloWorldSession {
 
 	private String username;
